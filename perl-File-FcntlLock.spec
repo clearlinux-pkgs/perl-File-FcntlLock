@@ -76,16 +76,16 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.1/x86_64-linux-thread-multi/File/FcntlLock.pm
-/usr/lib/perl5/vendor_perl/5.28.1/x86_64-linux-thread-multi/File/FcntlLock.pod
-/usr/lib/perl5/vendor_perl/5.28.1/x86_64-linux-thread-multi/File/FcntlLock/Core.pm
-/usr/lib/perl5/vendor_perl/5.28.1/x86_64-linux-thread-multi/File/FcntlLock/Errors.pm
-/usr/lib/perl5/vendor_perl/5.28.1/x86_64-linux-thread-multi/File/FcntlLock/Inline.pm
-/usr/lib/perl5/vendor_perl/5.28.1/x86_64-linux-thread-multi/File/FcntlLock/Inline.pod
-/usr/lib/perl5/vendor_perl/5.28.1/x86_64-linux-thread-multi/File/FcntlLock/Pure.pm
-/usr/lib/perl5/vendor_perl/5.28.1/x86_64-linux-thread-multi/File/FcntlLock/Pure.pod
-/usr/lib/perl5/vendor_perl/5.28.1/x86_64-linux-thread-multi/File/FcntlLock/XS.pm
-/usr/lib/perl5/vendor_perl/5.28.1/x86_64-linux-thread-multi/File/FcntlLock/XS.pod
+/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/File/FcntlLock.pm
+/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/File/FcntlLock.pod
+/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/File/FcntlLock/Core.pm
+/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/File/FcntlLock/Errors.pm
+/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/File/FcntlLock/Inline.pm
+/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/File/FcntlLock/Inline.pod
+/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/File/FcntlLock/Pure.pm
+/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/File/FcntlLock/Pure.pod
+/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/File/FcntlLock/XS.pm
+/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/File/FcntlLock/XS.pod
 
 %files dev
 %defattr(-,root,root,-)
@@ -96,4 +96,4 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files lib
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.1/x86_64-linux-thread-multi/auto/File/FcntlLock/FcntlLock.so
+/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/auto/File/FcntlLock/FcntlLock.so
