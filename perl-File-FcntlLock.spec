@@ -4,10 +4,10 @@
 #
 Name     : perl-File-FcntlLock
 Version  : 0.22
-Release  : 9
+Release  : 10
 URL      : https://cpan.metacpan.org/authors/id/J/JT/JTT/File-FcntlLock-0.22.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/J/JT/JTT/File-FcntlLock-0.22.tar.gz
-Summary  : File locking with L<fcntl(2)>
+Summary  : Perl module for file locking with fcntl(2)
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
 Requires: perl-File-FcntlLock-lib = %{version}-%{release}
@@ -26,6 +26,7 @@ Summary: dev components for the perl-File-FcntlLock package.
 Group: Development
 Requires: perl-File-FcntlLock-lib = %{version}-%{release}
 Provides: perl-File-FcntlLock-devel = %{version}-%{release}
+Requires: perl-File-FcntlLock = %{version}-%{release}
 
 %description dev
 dev components for the perl-File-FcntlLock package.
