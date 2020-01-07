@@ -4,13 +4,13 @@
 #
 Name     : perl-File-FcntlLock
 Version  : 0.22
-Release  : 12
+Release  : 13
 URL      : https://cpan.metacpan.org/authors/id/J/JT/JTT/File-FcntlLock-0.22.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/J/JT/JTT/File-FcntlLock-0.22.tar.gz
-Summary  : Perl module for file locking with fcntl(2)
+Summary  : File locking with L<fcntl(2)>
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
-Requires: perl-File-FcntlLock-lib = %{version}-%{release}
+Requires: perl-File-FcntlLock-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
 
 %description
@@ -24,7 +24,6 @@ with flock(2), on which Perls flock() function is based per default.
 %package dev
 Summary: dev components for the perl-File-FcntlLock package.
 Group: Development
-Requires: perl-File-FcntlLock-lib = %{version}-%{release}
 Provides: perl-File-FcntlLock-devel = %{version}-%{release}
 Requires: perl-File-FcntlLock = %{version}-%{release}
 
@@ -32,22 +31,24 @@ Requires: perl-File-FcntlLock = %{version}-%{release}
 dev components for the perl-File-FcntlLock package.
 
 
-%package lib
-Summary: lib components for the perl-File-FcntlLock package.
-Group: Libraries
+%package perl
+Summary: perl components for the perl-File-FcntlLock package.
+Group: Default
+Requires: perl-File-FcntlLock = %{version}-%{release}
 
-%description lib
-lib components for the perl-File-FcntlLock package.
+%description perl
+perl components for the perl-File-FcntlLock package.
 
 
 %prep
 %setup -q -n File-FcntlLock-0.22
+cd %{_builddir}/File-FcntlLock-0.22
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
+export LANG=C.UTF-8
 if test -f Makefile.PL; then
 %{__perl} Makefile.PL
 make  %{?_smp_mflags}
@@ -57,7 +58,7 @@ else
 fi
 
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
@@ -77,16 +78,6 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/File/FcntlLock.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/File/FcntlLock.pod
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/File/FcntlLock/Core.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/File/FcntlLock/Errors.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/File/FcntlLock/Inline.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/File/FcntlLock/Inline.pod
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/File/FcntlLock/Pure.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/File/FcntlLock/Pure.pod
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/File/FcntlLock/XS.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/File/FcntlLock/XS.pod
 
 %files dev
 %defattr(-,root,root,-)
@@ -95,6 +86,16 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 /usr/share/man/man3/File::FcntlLock::Pure.3
 /usr/share/man/man3/File::FcntlLock::XS.3
 
-%files lib
+%files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/auto/File/FcntlLock/FcntlLock.so
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/File/FcntlLock.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/File/FcntlLock.pod
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/File/FcntlLock/Core.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/File/FcntlLock/Errors.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/File/FcntlLock/Inline.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/File/FcntlLock/Inline.pod
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/File/FcntlLock/Pure.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/File/FcntlLock/Pure.pod
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/File/FcntlLock/XS.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/File/FcntlLock/XS.pod
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/auto/File/FcntlLock/FcntlLock.so
