@@ -4,7 +4,7 @@
 #
 Name     : perl-File-FcntlLock
 Version  : 0.22
-Release  : 22
+Release  : 23
 URL      : https://cpan.metacpan.org/authors/id/J/JT/JTT/File-FcntlLock-0.22.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/J/JT/JTT/File-FcntlLock-0.22.tar.gz
 Summary  : File locking with L<fcntl(2)>
@@ -88,14 +88,4 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.34.0/x86_64-linux-thread-multi/File/FcntlLock.pm
-/usr/lib/perl5/vendor_perl/5.34.0/x86_64-linux-thread-multi/File/FcntlLock.pod
-/usr/lib/perl5/vendor_perl/5.34.0/x86_64-linux-thread-multi/File/FcntlLock/Core.pm
-/usr/lib/perl5/vendor_perl/5.34.0/x86_64-linux-thread-multi/File/FcntlLock/Errors.pm
-/usr/lib/perl5/vendor_perl/5.34.0/x86_64-linux-thread-multi/File/FcntlLock/Inline.pm
-/usr/lib/perl5/vendor_perl/5.34.0/x86_64-linux-thread-multi/File/FcntlLock/Inline.pod
-/usr/lib/perl5/vendor_perl/5.34.0/x86_64-linux-thread-multi/File/FcntlLock/Pure.pm
-/usr/lib/perl5/vendor_perl/5.34.0/x86_64-linux-thread-multi/File/FcntlLock/Pure.pod
-/usr/lib/perl5/vendor_perl/5.34.0/x86_64-linux-thread-multi/File/FcntlLock/XS.pm
-/usr/lib/perl5/vendor_perl/5.34.0/x86_64-linux-thread-multi/File/FcntlLock/XS.pod
-/usr/lib/perl5/vendor_perl/5.34.0/x86_64-linux-thread-multi/auto/File/FcntlLock/FcntlLock.so
+/usr/lib/perl5/*
