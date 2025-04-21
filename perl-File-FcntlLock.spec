@@ -7,7 +7,7 @@
 #
 Name     : perl-File-FcntlLock
 Version  : 0.22
-Release  : 30
+Release  : 31
 URL      : https://cpan.metacpan.org/authors/id/J/JT/JTT/File-FcntlLock-0.22.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/J/JT/JTT/File-FcntlLock-0.22.tar.gz
 Summary  : File locking with L<fcntl(2)>
